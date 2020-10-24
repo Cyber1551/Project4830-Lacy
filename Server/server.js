@@ -12,7 +12,7 @@ const server = http.createServer(app);
 const io = socketio(server);
 
 app.use(function (req, res, next) {
-  res.header("Access-Control-Allow-Origin", "http://172.31.37.130"); // update to match the domain you will make the request from
+  res.header("Access-Control-Allow-Origin", "http://127.0.0.1:80"); // update to match the domain you will make the request from
   res.header(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept"
