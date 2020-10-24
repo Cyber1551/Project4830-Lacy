@@ -1,7 +1,7 @@
 import axios from "axios";
 import { IUser } from "../constants";
 
-const ENDPOINT = "http://172.31.37.130:5000";
+const ENDPOINT = "http://18.191.134.20:5000";
 
 export const Login = async (
   username: string,
