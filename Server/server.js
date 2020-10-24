@@ -21,7 +21,9 @@ app.use(function (req, res, next) {
 });
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
+app.get('/', (req, res) => {
+  res.send("HELLO WORLD");
+})
 const db = mongojs(
   "mongodb://root:Password12345@ds011860.mlab.com:11860/project4830"
 );
