@@ -12,7 +12,8 @@ const server = http.createServer(app);
 const io = socketio(server);
 
 app.use(function (req, res, next) {
-  res.header("Access-Control-Allow-Origin", "http://172.31.37.130:80"); // update to match the domain you will make the request from
+  res.header("Access-Control-Allow-Origin", "*"); // update to match the domain you will make the request from
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS, UPDATE, DELETE");
   res.header(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept"
